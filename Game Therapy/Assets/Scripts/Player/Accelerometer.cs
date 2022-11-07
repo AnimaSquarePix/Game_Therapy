@@ -6,7 +6,7 @@ public class Accelerometer : MonoBehaviour
 {
     private bool isFlat = true;
     private Rigidbody playerRB;
-    private float speed = 7f;
+    private float speed = 20f;
 
     void Start()
     {
