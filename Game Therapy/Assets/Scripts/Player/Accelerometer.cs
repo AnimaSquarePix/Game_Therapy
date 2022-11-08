@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class Accelerometer : MonoBehaviour
 {
-    private bool isFlat = true;
     private Rigidbody playerRB;
-    private float speed = 20f;
+    private float speed = 10f;
 
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        // Accelerometer variable
         Vector3 tilt = Input.acceleration;
 
-        if (isFlat)
-        {
-            tilt = Quaternion.Euler(180, 0, 0) * tilt * speed;
-        }
+        // Acceleration * speed
+        tilt = Quaternion.Euler(180, 0, 0) * tilt * speed;
 
+        // Adds the force to the player rigidbody
         playerRB.AddForce(tilt);
+
+        // Draws a blue line to see the direction he is going
         Debug.DrawRay(transform.position + Vector3.up, tilt, Color.blue);
     }
 }
