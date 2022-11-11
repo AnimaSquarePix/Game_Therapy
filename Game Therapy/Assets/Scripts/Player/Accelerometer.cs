@@ -21,7 +21,7 @@ public class Accelerometer : MonoBehaviour
         tilt = Quaternion.Euler(180, 0, 0) * tilt * speed;
 
         // Adds the force to the player rigidbody
-        playerRB.AddForce(tilt);
+        playerRB.AddForce(tilt, ForceMode.Acceleration);
 
         // Draws a blue line to see the direction he is going
         Debug.DrawRay(transform.position + Vector3.up, tilt, Color.blue);
