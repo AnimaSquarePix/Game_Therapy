@@ -5,7 +5,7 @@ using UnityEngine;
 public class Accelerometer : MonoBehaviour
 {
     private Rigidbody playerRB;
-    private float speed = 10f;
+    [SerializeField] private float speed = 10f;
 
     void Start()
     {
