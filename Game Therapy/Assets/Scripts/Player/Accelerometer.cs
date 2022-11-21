@@ -16,7 +16,7 @@ public class Accelerometer : MonoBehaviour
     {
         // Accelerometer variable
         Vector3 tilt = Input.acceleration;
-
+        
         // Acceleration * speed
         tilt = Quaternion.Euler(180, 0, 0) * tilt * speed;
 
