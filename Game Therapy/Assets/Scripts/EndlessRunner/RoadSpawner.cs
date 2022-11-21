@@ -8,7 +8,7 @@ public class RoadSpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> roads;
 
-    private float offset = 40f;
+    private float offset = 39.5f;
 
     void Start()
     {
