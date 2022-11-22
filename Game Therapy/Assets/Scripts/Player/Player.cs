@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     private SphereCollider sphereCollider;
     
-    private float forwardSpeed = 14f;
+    private float forwardSpeed = 7f;
 
     private SpawnManager spawnManager;
 
@@ -24,5 +24,13 @@ public class Player : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         spawnManager.SpawnTriggerEntered();
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
