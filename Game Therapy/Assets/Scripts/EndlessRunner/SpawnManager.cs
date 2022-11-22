@@ -6,11 +6,13 @@ public class SpawnManager : MonoBehaviour
 {
     RoadSpawner roadSpawner;
     PlotSpawner plotSpawner;
+    ObstacleSpawner obstacleSpawner;
 
     void Start()
     {
         roadSpawner = GetComponent<RoadSpawner>();
         plotSpawner = GetComponent<PlotSpawner>();
+        obstacleSpawner = GetComponent<ObstacleSpawner>();
     }
 
     void Update()
@@ -22,5 +24,6 @@ public class SpawnManager : MonoBehaviour
     {
         roadSpawner.MoveRoad();
         plotSpawner.SpawnPlot();
+        obstacleSpawner.SpawnObstacles();
     }
 }

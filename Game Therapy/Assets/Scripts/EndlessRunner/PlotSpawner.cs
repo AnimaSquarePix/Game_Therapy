@@ -10,7 +10,8 @@ public class PlotSpawner : MonoBehaviour
     private float xPosRight = 26.75f;
     private float lastZPos = 8f;
 
-    public List<GameObject> plots;
+    [SerializeField]
+    private List<GameObject> plots;
 
     void Start()
     {
@@ -18,11 +19,6 @@ public class PlotSpawner : MonoBehaviour
         {
             SpawnPlot();
         }
-    }
-
-    void Update()
-    {
-        
     }
 
     public void SpawnPlot()

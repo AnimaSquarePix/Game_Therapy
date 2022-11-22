@@ -21,6 +21,7 @@ public class RoadSpawner : MonoBehaviour
 
     public void MoveRoad()
     {
+        // Removes the last piece of road, and re-spawns her in front of the rest
         GameObject movedRoad = roads[0];
         roads.Remove(movedRoad);
         float newZ = roads[roads.Count - 1].transform.position.z + offset;

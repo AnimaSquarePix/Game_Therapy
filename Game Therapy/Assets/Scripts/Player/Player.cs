@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     private SphereCollider sphereCollider;
     
-    private float forwardSpeed = 7f;
+    private float forwardSpeed = 14f;
 
     private SpawnManager spawnManager;
 
