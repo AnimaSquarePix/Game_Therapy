@@ -11,16 +11,6 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> obstacles;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void SpawnObstacles()
     {
         lastSpawnZ += spawnInterval;

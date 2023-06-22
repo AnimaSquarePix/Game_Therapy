@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
+        //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
     }
 
     void OnTriggerEnter(Collider other)
